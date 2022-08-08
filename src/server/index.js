@@ -1,5 +1,6 @@
-import express from 'express';
-import http from 'http';
+const express = require('express');
+const http = require('http');
+const router = require('./router');
 
 const PORT = 8000;
 
@@ -7,6 +8,8 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
 
 const server = http.createServer(app);
 
